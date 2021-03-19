@@ -1,0 +1,36 @@
+.topo{
+	width: 100%;
+	float: left;
+	position: fixed;
+	top: 30px;
+	font-style: italic;
+	color: #ffffff;
+	left: 0; 
+	z-index: 3;
+	background-color: #343a40;
+	height: 7%;
+}
+
+
+.topo-direita{
+	height: 100%;
+	width: 70%;
+  position: relative;
+  float: right;
+  text-align: right;
+  margin-right: 3%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.topo-esquerda{
+  padding: 20px;
+	height: 100%;
+	width: 10%;
+  position: relative;
+  float: left;
+}
+
+.espaco{
+  margin-right: 10px;
+}

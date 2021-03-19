@@ -1,0 +1,18 @@
+.footer{
+	height: 22px;
+	width: 100%;
+	float: left;
+	position: fixed;
+	bottom: 0;
+	font-style: italic;
+	opacity: 0.7;
+	color: #fdfdfd;
+	font-size: 1px;
+	left: 0; 
+	z-index: 4;
+	background-color: rgb(4, 21, 248);
+}
+
+.txt{
+	font-size: 15px;
+}

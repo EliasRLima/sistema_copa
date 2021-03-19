@@ -1,0 +1,9 @@
+The svT License (MIT)
+
+Copyright (c) 2014-2019 British Columbia Institute of Technology
+Copyright (c) 2019-2020 CodeIgniter Foundation
+Copyright (c) 2020 svT - Mapler
+
+Esse sistema foi desenvolvido utilizando CodeIgniter. 
+Seu uso é especifico para o compilador Mapler, não devendo ser compartilhado.
+Todos os direitos reservados para svT.

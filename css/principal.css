@@ -1,0 +1,30 @@
+* {
+	position: relative;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color:#343a40;
+	height: 100%;
+	z-index: 2;
+}
+
+.meio{
+	height: 80%;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: #58585a;
+	text-align: center;
+	pointer-events: none;
+}
+
+.meio-titulo{
+	height: 20%;
+	width: 100%;
+	top: 0;
+	background-color: greenyellow;
+	color: #fff;
+	pointer-events: none;
+}
