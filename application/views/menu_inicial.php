@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						    <img src="<?php echo base_url('images/logo.jpg'); ?>" /></br>
 							<a href="login" class="btn btn-primary btn-sm">Login</a></br>
 							<a href="" class="btn btn-primary btn-sm">Pesquisar</a></br>
-							<a href="" class="btn btn-primary btn-sm">Sobre</a>
+							<a href="sobre" class="btn btn-primary btn-sm">Sobre</a>
                         </form>
                 </div>
 	</body>
