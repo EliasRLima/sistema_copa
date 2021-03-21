@@ -1,0 +1,95 @@
+
+input[type=text] {
+    width: 70%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    top: 10%;
+    left: 15%;
+    right: 15%;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+ }
+ 
+ input[type=text]:focus {
+     border: 3px solid #555;
+ }
+ 
+ input[type=password] {
+     width: 70%;
+     box-sizing: border-box;
+     border: 2px solid #ccc;
+     border-radius: 4px;
+     font-size: 16px;
+     left: 15%;
+     right: 15%;
+     top: 13%;
+     background-color: white;
+     background-position: 10px 10px; 
+     background-repeat: no-repeat;
+     padding: 12px 20px 12px 40px;
+  }
+  
+  input[type=password]:focus {
+      border: 3px solid #555;
+  }
+ 
+  input[type=submit] {
+     width: 40%;
+     border-radius: 4px;
+     font-size: 16px;
+     left: 50%;
+     right: 30%;
+     top: 16%;
+     background-position: 10px 10px; 
+     padding: 12px 20px 12px 40px;
+  }
+  
+  input[type=submit]:focus {
+      border: 3px solid #555;
+  }
+ 
+ body.center {
+     min-height: 100vh;
+ }
+ 
+ div.center {
+     position: relative;
+     min-height: 100vh;
+ }
+ 
+ div.center > form {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 40%;
+     height: 70%;
+     transform: translateY(-50%) translateX(-50%);
+     background-color: rgba(0, 0, 0, 0.075);
+ }
+ 
+ 
+ .form a {
+     width: 40%;
+     border-radius: 4px;
+     font-size: 16px;
+     left: -32%;
+     top: 10.5%;
+     background-position: 10px 10px; 
+     padding: 12px 20px 12px 40px;
+     margin-bottom: 2.5em;
+     margin-left: 30%;
+     text-align: center;
+ }
+
+ .form img {
+    margin-top: 4.5em;
+    margin-bottom: 2.5em;
+    margin-left: 35%;
+    border-radius: 50%;
+
+ }
+ 

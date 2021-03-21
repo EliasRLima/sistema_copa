@@ -16,19 +16,6 @@ class Crud extends CI_Model {
 			return $ins;
 		}
 
-	public function verificaMatricula($matricula)
-		{
-			error_reporting(0);
-			$this->load->database();
-			$sql = 'SELECT 1 as matriculas FROM `pessoa` WHERE `p_matricula` = '.$matricula.' LIMIT 1';
-			$query = $this->db->query($sql);
-			$matricula = 0;
-			foreach ($query->result() as $row){
-				$matricula = $row->matriculas;
-			}
-			return $matricula;				
-	}
-
 	public function update($table,$data,$campocondicional,$condicao)
 		{
 			error_reporting(0);

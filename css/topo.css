@@ -6,9 +6,9 @@
 	font-style: italic;
 	color: #ffffff;
 	left: 0; 
-	z-index: 3;
-	background-color: #343a40;
-	height: 7%;
+	z-index: 1;
+	background-color: transparent;
+	height: 6%;
 }
 
 
@@ -21,14 +21,16 @@
   margin-right: 3%;
   padding-top: 10px;
   padding-bottom: 10px;
+  background-color: transparent;
 }
 
 .topo-esquerda{
   padding: 20px;
-	height: 100%;
-	width: 10%;
-  position: relative;
+  height: 100%;
+  width: 50%;
+  position: absolute;
   float: left;
+  background-color: transparent;
 }
 
 .espaco{

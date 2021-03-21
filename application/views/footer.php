@@ -8,7 +8,7 @@
 			<div class="footer">
 
 				<?php 
-					echo $_SESSION['FOOTER'];
+					echo $this->session->userdata('FOOTER');//$_SESSION['FOOTER'];
 				?>
 			</div>
 	</body>

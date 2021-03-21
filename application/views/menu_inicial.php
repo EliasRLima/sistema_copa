@@ -5,16 +5,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html class="no-js">
 	<head>
-		<link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/principal.css">
 		<link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/background.css">
-		<title>Bem vindo(a)!</title>
+		<link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/inicio.css">
 	</head>
-	<body>
-		
-		<div class="meio">
-			<div class="meio-titulo">
-				<p class="display-2"> <b>COPA</b> - Sistema de Controle de Patentes</p>
-			</div>
-		</div>
+	<body class="center">
+                <div class="center">
+                        <form class="form">
+						    <img src="<?php echo base_url('images/logo.jpg'); ?>" /></br>
+							<a href="login" class="btn btn-primary btn-sm">Login</a></br>
+							<a href="" class="btn btn-primary btn-sm">Pesquisar</a></br>
+							<a href="" class="btn btn-primary btn-sm">Sobre</a>
+                        </form>
+                </div>
 	</body>
 </html>

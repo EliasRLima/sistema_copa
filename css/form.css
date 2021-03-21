@@ -1,0 +1,110 @@
+
+
+
+input[type=text] {
+    width: 80%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    top: 10%;
+    left: 25%;
+    right: 15%;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    margin-left: 10%;
+ }
+ 
+ input[type=text]:focus {
+     border: 3px solid #555;
+ }
+ 
+ input[type=password] {
+     width: 80%;
+     box-sizing: border-box;
+     border: 2px solid #ccc;
+     border-radius: 4px;
+     font-size: 16px;
+     left: 15%;
+     right: 15%;
+     top: 13%;
+     background-color: white;
+     background-position: 10px 10px; 
+     background-repeat: no-repeat;
+     padding: 12px 20px 12px 40px;
+  }
+  
+  input[type=password]:focus {
+      border: 3px solid #555;
+  }
+ 
+  input[type=submit] {
+     width: 40%;
+     border-radius: 4px;
+     font-size: 16px;
+     left: 50%;
+     right: 30%;
+     top: 16%;
+     background-position: 10px 10px; 
+     padding: 12px 20px 12px 40px;
+  }
+  
+  input[type=submit]:focus {
+      border: 3px solid #555;
+  }
+ 
+ body.center-form {
+     min-height: 100vh;
+ }
+ 
+ div.center-form {
+     position: relative;
+     min-height: 100vh;
+ }
+ 
+ div.center-form > form {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 30%;
+     height: 40%;
+     padding: 30px;
+     transform: translateY(-50%) translateX(-50%);
+     background-color: rgba(0, 0, 0, 0.075);
+ }
+
+ div.center2-form {
+    position: relative;
+    min-height: 100vh;
+}
+
+div.center2-form > form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 75%;
+    padding: 30px;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+
+ 
+ .form input {
+     margin-bottom: 2.5em;
+     margin-left: 10%;
+ }
+ 
+ .form a {
+     width: 40%;
+     border-radius: 4px;
+     font-size: 16px;
+     background-position: 10px 10px; 
+     padding: 12px 20px 12px 40px;
+     margin-top: -8.5%;
+     margin-left: 3%;
+ }
+ 
