@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <form class="form">
 						    <div class="container masthead-followup p-5 px-4 px-md-3">
                                     <section class="mt-5 pt-3 lead">
-                                        <h1 style="color: white">COPA - Controle de Patentes</h1>
+                                        <h1 style="color: #007bff;">COPA - Controle de Patentes</h1>
                                         <p style="color: white">
                                             Este projeto foi iniciado em 2021 no <strong>Instituto Federal do Maranhão</strong> e desenvolvido durante a disciplina de Engenharia de Software no curso de <strong>Sistemas de informação</strong>. Alunos participantes:
                                         </p>

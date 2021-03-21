@@ -21,7 +21,7 @@
 				   }else{
 				?>
 					<a href="menu" class="btn btn-dark btn-sm espaco">in&iacute;cio</a>
-					<a href="" class="btn btn-dark btn-sm espaco">sobre</a>
+					<a href="sobre" class="btn btn-dark btn-sm espaco">sobre</a>
 					<a href="login" class="btn btn-outline-primary espaco">LOGIN</a> 
 				<?php
 				   }
