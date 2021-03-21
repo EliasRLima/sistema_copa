@@ -24,4 +24,16 @@ class Login extends CI_Model {
 			return 0;	
 		}
 
+    public function getGrupo($cpf)
+        {
+            error_reporting(0);
+			$this->load->database();
+            $sql = "SELECT u.idgrupo FROM usuario u WHERE u.cpfcnpj = '".$cpf."'";
+			$query = $this->db->query($sql);
+            foreach ($query->result() as $row){
+				return $row->idgrupo;
+			}
+			return -1;
+        }
+
 }
