@@ -12,7 +12,7 @@ class Menu extends CI_Controller {
 			if($this->session->has_userdata('GRUPO')){
 				$grupo = $this->session->userdata('GRUPO');
 				if($grupo == 1){
-					echo '<script type="text/javascript">window.location.replace("patente");</script>';
+					echo '<script type="text/javascript">window.location.replace("pesquisador");</script>';
 				}else if($grupo == 2){
 					echo '<script type="text/javascript">window.location.replace("nit");</script>';
 				}else if($grupo == 3){

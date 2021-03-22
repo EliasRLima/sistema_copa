@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <input type="text" name="email" id="email" value="<?php echo $email;?>" placeholder="Email..."/>
 				            <input type="password" name="pass" id="pass" value="" placeholder="Senha..."/>
                             <input type="password" name="passconfirm" id="passconfirm" value="" placeholder="Confirme sua senha..."/>
-                            <a href="login" class="btn btn-secondary btn-sm">Voltar</a>
+                            <a href="acesso/login" class="btn btn-secondary btn-sm">Voltar</a>
 				            <input class="btn btn-primary" type="submit" id="bntEfeito1" name="bntEfeito1" value="CADASTRAR" onmouseover = "efeito1()" onmouseout="retirar_efeito1()" />		
                             <?php 
 				                if($this->session->userdata('key_fail') == "cpfcnpj"){

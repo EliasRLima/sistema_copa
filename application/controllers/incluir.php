@@ -46,7 +46,7 @@ class Incluir extends CI_Controller {
             'email'  => $email,
             'nome'  => $nome,
             'sobrenome' => $sobrenome,
-            'dataini' => "STR_TO_DATE(".date('Y/m/d').", '%Y-%m-%d')",
+            'dataini' => str_replace('/','',date('Y/m/d')),
             'status' => 1,
             'idgrupo' => 1
             );
@@ -59,7 +59,7 @@ class Incluir extends CI_Controller {
                 $sql = array(
                     'idUsuario' => $iduser, 
                     'senha' => sha1($senha), 
-                    'dtini' => "STR_TO_DATE(".date('Y/m/d').", '%Y-%m-%d')", 
+                    'dtini' => str_replace('/','',date('Y/m/d')), 
                     'status' => 1
                 );
                 $tabela = 'senhas';
@@ -67,13 +67,13 @@ class Incluir extends CI_Controller {
                 if($valor > 0){
                     //true total
                     $this->session->set_userdata('key_fail', 'sucess');
-                    echo '<script type="text/javascript">window.location.replace("login");</script>';
+                    echo '<script type="text/javascript">window.location.replace("acesso/login");</script>';
                 }else{
                     //false
                     $tabela = 'usuario';
                     $coluna = 'idusuario';
                     $valor = $this->crud->delete($tabela, $coluna, $iduser);
-                    $this->session->set_userdata('key_fail', 'bd');
+                    $this->session->set_userdata('key_fail', 'fail');
                     echo '<script type="text/javascript">window.location.replace("cadastro");</script>';
                 }
         }else{

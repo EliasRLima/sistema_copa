@@ -25,13 +25,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <form id="login" method="POST" action="autorizar" class="form">
 				<input type="text" name="usercopa" id="usercopa" value="" placeholder="CPF ou CNPJ..." autofocus/>
 				<input type="password" name="pass" id="pass" value="" placeholder="Senha..."/>
-                                <a href="cadastro" class="btn btn-secondary btn-sm">Cadastre-se</a>
+                                <a href="../cadastro" class="btn btn-secondary btn-sm">Cadastre-se</a>
 				<input class="btn btn-primary" type="submit" id="bntEfeito1" name="bntEfeito1" value="LOGIN" onmouseover = "efeito1()" onmouseout="retirar_efeito1()" />		
                                 
                         
                                 <?php 
 				        if($this->session->userdata('key_fail') == "login"){
-				                echo '<label class="cx-label" style="color: red; font-size: 14px;top: 30%;"></br>DADOS DIGITADOS ESTAVAM INCORRETOS <a class="btn btn-warning btn-sm" style="left: 20%;color: black;" >recuperar a senha</a></label>';
+				                echo '<label class="cx-label" style="color: red; font-size: 14px;top: 30%;"></br>DADOS DIGITADOS ESTAVAM INCORRETOS </label>
+                                                </br><a class="btn btn-warning btn-sm" style="left: 20%;color: black;float: right" >recuperar a senha</a></label>';
 					        $this->session->set_userdata('key_fail', '');
 				        }else if($this->session->userdata('key_fail') == "sucess"){
                                                 echo '<label class="cx-label" style="color: green; font-size: 14px;top: 30%;"></br>Cadastro efetuado.</label>';
