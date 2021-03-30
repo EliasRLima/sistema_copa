@@ -95,4 +95,16 @@ class Patente extends CI_Controller {
 		$this->session->set_flashdata('patente',$data);
 		echo '<script type="text/javascript">window.location.replace("../pesquisador?area=2&patente='.$idpatenteajuste.'");</script>'; 
 	}
+
+	public function solicitar(){
+		$this->load->helper('url');
+		$this->load->library('session');
+
+		$idsolicitacao = $this->input->post('idaprovar');
+		$this->load->model('md_patente');
+		$data = $this->md_patente->getSolicitacao($idsolicitacao);
+		$this->session->set_flashdata('patente',$data);
+		echo '<script type="text/javascript">window.location.replace("../nit?area=1&patente='.$idsolicitacao.'");</script>'; 
+	}
+
 }

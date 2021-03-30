@@ -42,23 +42,22 @@ class Nit extends CI_Controller {
 			$data['tipos'] = $data_aux['tipo'];
 			$id = $this->input->get('patente');
 			$patente = $this->session->flashdata('patente');
-			$patente = array(
+			/*$patente = array(
                 'ajuste' => 'precisa mudar a descricao, colocar de forma mais clara.',
                 'dtajuste' => '21/03/2021',
                 'patente' => 'Jogo de cartas',
                 'situacao' => 'Pendente',
                 'descricao' => 'Eh um jogo bom',
-            );
+            );*/
 			$data['patente'] = $patente;
-			if(isset($id)){
-				$data['patente_ajuste'] = $id;
+			$data['selecionado'] = false;
+			if(isset($id) && $id > 0 && isset($patente)){
+				$data['selecionado'] = true;
 				
-			}else{
-				$data['patente_ajuste'] = -1;
 			}
 		}
 		$data['aviso'] = '1';
-		$this->load->view('pesquisador', $data);
+		$this->load->view('nit', $data);
 		$this->session->set_userdata('FOOTER', '<center><h4 class="txt">&reg;COPA - 2021</h4></center>');
 		$this->load->view('footer');
 	}
