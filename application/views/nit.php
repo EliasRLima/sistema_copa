@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <?php
                                         if($selecionado == true){
                                             ?>
-                                            <form id="cadastro" method="POST" action="patente/cadastro" class="p-3 mb-2 bg-dark text-white">
+                                            <form id="cadastro" method="POST" action="processo/aprovar" class="p-3 mb-2 bg-dark text-white">
                                                 <input type="hidden" id="idsolicitacao" name="idsolicitacao" value="<?php echo $patente['idsolicitacao'];?>" /> 
                                                 <h3 style="color: #007bff">Patente</h3></br>
 				                        
@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <label for="patente_descricao">Resumo descritivo</label>
                                                     <textarea class="form-control" id="patente_descricao" name="patente_descricao" rows="10" value="oi" disabled><?php echo $patente['descricao'];?></textarea>
                                                 </div>
-                                                <a href="recusar?id=<?php echo $patente['idsolicitacao'];?>" class="btn btn-danger btn-sm">Recusar</a>
+                                                <a href="processo/recusar?id=<?php echo $patente['idsolicitacao'];?>" class="btn btn-danger btn-sm">Recusar</a>
 				                                <input class="btn btn-primary" type="submit" id="bntEfeito1" name="bntEfeito1" value="APROVAR" onmouseover = "efeito1()" onmouseout="retirar_efeito1()" />		
                                             </form>
                                     <?php
@@ -95,71 +95,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					                    $this->session->set_userdata('key_fail', '');
                                     }
                             }else if($area == 2){
-                                ?>
-                                    <form id="ajuste" method="POST" action="patente/selecionar" class="p-3 mb-2 bg-dark text-white">
-                                        <h3 style="color: #007bff">Ajuste de patente</h3></br>
-                                        <div class="form-group">
-                                            <label for="idajuste">Selecione a patente</label>
-                                            <select class="form-control" id="idajuste" name="idajuste">
-                                                <?php
-                                                    echo $ajustes;
-                                                ?>
-                                            </select>
-                                        </div>
-				                        <input class="btn btn-primary" type="submit" id="bntEfeito1" name="bntEfeito1" value="SELECIONAR" onmouseover = "efeito1()" onmouseout="retirar_efeito1()" />
-                                    </form>
-                                    <form id="ajuste" method="POST" action="patente/ajuste" class="p-3 mb-2 bg-dark text-white">
-                                        <?php
-                                            if($patente_ajuste != -1){
-                                                ?>
-                                                    </br>
-                                                    <div class="form-group">
-                                                        <label>Data da solicitacao de ajuste: <?php echo $patente['dtajuste'];?></label>
-                                                    </div>
-                                                    <input type="hidden" id="idpatenteajuste" name="idpatenteajuste" value="<?php echo $patente_ajuste;?>" />
-                                                    <div class="form-group">
-                                                        <label for="ajuste_descricao">Descricao do ajuste</label>
-                                                        <textarea class="form-control" id="ajuste_descricao" name="ajuste_descricao" rows="2" disabled ><?php echo $patente['ajuste']; ?></textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="patente_name">Nome da patente</label>
-                                                        <input type="text" class="form-control" name="patente_name" id="patente_name" value="<?php echo $patente['patente'];?>" placeholder="Digite o nome..." autofocus/>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="patente_tipo">Tipo da patente</label>
-                                                        <select class="form-control" id="patente_tipo" name="patente_tipo">
-                                                            <?php
-                                                                echo $tipos;
-                                                            ?>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="patente_descricao">Resumo descritivo</label>
-                                                        <textarea class="form-control" id="patente_descricao" name="patente_descricao" rows="10"><?php echo $patente['descricao'];?></textarea>
-                                                    </div>
-
-				                                    <input class="btn btn-primary" type="submit" id="bntEfeito1" name="bntEfeito1" value="ENVIAR" onmouseover = "efeito1()" onmouseout="retirar_efeito1()" />
-                                                <?php
-                                            }
-
-                                        ?>
-                                        		
-                                    </form>
-                        
-                                <?php 
-				                    if($this->session->userdata('key_fail') == "name"){
-				                        echo '<label class="cx-label" style="color: red; font-size: 14px;top: 30%;"></br>Ja existe uma patente com esse nome!<a class="btn btn-warning btn-sm" style="left: 20%;color: black;" >recuperar a senha</a></label>';
-					                    $this->session->set_userdata('key_fail', '');
-				                    }else if($this->session->userdata('key_fail') == "sucess"){
-                                        echo '<label class="cx-label" style="color: green; font-size: 14px;top: 30%;"></br>Cadastro efetuado.</label>';
-                                        $this->session->set_userdata('key_fail', '');
-                                    }
+                                echo "requisitar";
                             }else if($area == 3){
                                 echo "minhas";
                             }else if($area == 4){
                                 echo "revogar";
                             }else{
-                                echo "nada";
+                                $status = $this->session->flashdata('status');
+                                if($status == 'rep'){
+                                    ?>
+                                        <div class="alert alert-primary" role="alert">
+                                            A patente foi recusada.
+                                        </div>
+                                    <?php
+                                }else if($status == 'apv'){
+                                    ?>
+                                        <div class="alert alert-success" role="alert">
+                                            A patente foi aprovada.
+                                        </div>
+                                    <?php
+                                }
+                                echo "Bem vindo(a)!";
                             }
                         ?>
                     </div>

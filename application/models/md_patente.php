@@ -159,4 +159,45 @@ class Md_Patente extends CI_Model {
             return $novo;	
         }
 
+        public function getSolicitacaoAll($id)
+        {
+            error_reporting(0);
+            $this->load->database();
+            $sql = "SELECT ps.idsolicitacao, 
+                           p.idPatente as idpatente, 
+                           p.nome, 
+                           p.situacao, 
+                           p.descricao, 
+                           t.descricao as tipo, 
+                           ps.dtsolicitacao
+                    FROM patentesolicitacao ps,
+                         patente p,
+                         tipo t
+                    WHERE ps.idpatente = ps.idpatente
+                    and ps.idsolicitacao = ".$id."";
+            $query = $this->db->query($sql);
+            foreach ($query->result() as $row){
+                $data = array(
+                    'idsolicitacao' => $row->idsolicitacao,
+                    'idpatente' => $row->idpatente,
+                    'nome' => $row->nome,
+                    'situacao' => $row->situacao,
+                    'descricao' => $row->descricao,
+                    'tipo' => $row->tipo,
+                    'dtsolicitacao' => $row->dtsolicitacao
+                );
+                return $data;
+            }
+            $novo = array(
+                'idsolicitacao' => null,
+                'idpatente' => null,
+                'nome' => null,
+                'situacao' => null,
+                'descricao' => null,
+                'tipo' => null,
+                'dtsolicitacao' => null
+            );
+            return $novo;	
+        }
+
 }
