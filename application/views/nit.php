@@ -97,10 +97,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             }else if($area == 2){
                                 echo "requisitar";
                             }else if($area == 3){
-                                echo "minhas";
-                            }else if($area == 4){
                                 echo "revogar";
                             }else{
+                                //tela inicial
                                 $status = $this->session->flashdata('status');
                                 if($status == 'rep'){
                                     ?>

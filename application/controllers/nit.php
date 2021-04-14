@@ -22,6 +22,7 @@ class Nit extends CI_Controller {
 				}else{
 					$this->session->unset_userdata('LOGIN');
 					$this->session->unset_userdata('GRUPO');
+					echo '<script type="text/javascript">window.location.replace("acesso/LOGIN");</script>'; 
 				}
 			}else{
 				$this->session->unset_userdata('LOGIN');
@@ -31,6 +32,8 @@ class Nit extends CI_Controller {
 		}else{
             echo '<script type="text/javascript">window.location.replace("acesso/LOGIN");</script>'; 
         }
+
+		
 		$user = $this->session->userdata('LOGIN');
 		$data['identificador'] = $user['identificador'];
 		$data['area'] = $this->input->get('area');

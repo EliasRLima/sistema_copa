@@ -146,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             }else if($area == 4){
                                 echo "revogar";
                             }else{
-                                echo "nada";
+                                echo "Bem vindo!";
                             }
                         ?>
                     </div>

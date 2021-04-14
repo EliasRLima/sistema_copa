@@ -8,6 +8,7 @@ class Pesquisador extends CI_Controller {
 	{
 		$this->load->helper('url');
 		$this->load->library('session');
+		
 		if($this->session->has_userdata('LOGIN')){
 			if($this->session->has_userdata('GRUPO')){
 				$grupo = $this->session->userdata('GRUPO');
@@ -22,6 +23,7 @@ class Pesquisador extends CI_Controller {
 				}else{
 					$this->session->unset_userdata('LOGIN');
 					$this->session->unset_userdata('GRUPO');
+					echo '<script type="text/javascript">window.location.replace("acesso/LOGIN");</script>'; 
 				}
 			}else{
 				$this->session->unset_userdata('LOGIN');
@@ -31,13 +33,16 @@ class Pesquisador extends CI_Controller {
 		}else{
             echo '<script type="text/javascript">window.location.replace("acesso/LOGIN");</script>'; 
         }
+
 		$user = $this->session->userdata('LOGIN');
 		$data['identificador'] = $user['identificador'];
 		$data['area'] = $this->input->get('area');
 		$this->load->model('md_patente');
+
 		if($data['area'] == 1){//se for para cadastrar nova, deve carregar os tipos do banco
 			$data_aux = $this->md_patente->getTipos();
 			$data['tipos'] = $data_aux['tipo'];
+			
 		}else if($data['area'] == 2){//carregar patentes que precisam de reajuste
 			$data_aux = $this->md_patente->getPatentesAjustes($user['cpfcnpj']);
 			$data['ajustes'] = $data_aux['ajuste'];
